@@ -1,7 +1,7 @@
 import datetime
 import shutil
 from pathlib import Path
-import time
+import yaml
 
 from utils import *
 
@@ -14,8 +14,11 @@ def transfer_output(input_point, input_path='./workdir/madanalysis5/ANALYSIS', o
     folder_path = output_path / 'folders' / f'ANALYSIS-{input_point}'
     summary_path = folder_path / 'Output' / 'SAF' / 'CLs_output_summary.dat'
 
-    shutil.move(input_path, folder_path)
-    shutil.copy(summary_path, output_path / 'summaries' / f'summary-{input_point}.txt')
+    if input_path.exists():
+        shutil.move(input_path, folder_path)
+        shutil.copy(summary_path, output_path / 'summaries' / f'summary-{input_point}.txt')
+    else:
+        print(f'{input_point:<10}: Missing workflow folder, moving on')
 
 
 def run_cl(mChi, mPhi):

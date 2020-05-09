@@ -1,4 +1,6 @@
 import subprocess
+import yaml
+import os
 
 def make_param_card(mChi, mPhi, tmpl_path='./inputs/param_tmpl_mChi_mPhi.dat',
                     save_path='./inputs/param_card_mChi{mChi}_mPhi{mPhi}.dat'):
@@ -41,7 +43,7 @@ def run_flow(wf, script_path='./run.sh', output_folder='./yadage_logs'):
     TODO: save output logs to output_folder.
     """
 
-    subprocess.call([script_path, f'./workflow/{wf}'], shell=True, stdout=open(os.devnull, 'w'))
+    subprocess.call(f'{script_path} ./workflow/{wf}', shell=True, stdout=open(os.devnull, 'w'))
 
     '''
     with open(output_folder + f'/{point}.log', 'w+') as output_file:
