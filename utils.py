@@ -43,7 +43,8 @@ def run_flow(wf, script_path='./run.sh', output_folder='./yadage_logs'):
     TODO: save output logs to output_folder.
     """
 
-    subprocess.call(f'{script_path} ./workflow/{wf}', shell=True, stdout=open(os.devnull, 'w'))
+    with open(os.devnull, 'w')  as FNULL:
+        subprocess.call([script_path, f'workflows/{wf}'], shell=True, stdout=FNULL)
 
     '''
     with open(output_folder + f'/{point}.log', 'w+') as output_file:

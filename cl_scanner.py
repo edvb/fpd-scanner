@@ -46,7 +46,7 @@ def scan_cl(input_points):
     Get madanalysis5 output folder for each input point.
     """
 
-    last_time = datetime.datetime.now()
+    last_time = datetime.datetime.now().hour
     total_hours = 0
     for i in range(0, len(input_points)):
         mChi, mPhi = input_points[i]
@@ -64,9 +64,5 @@ def main():
 
 
 if __name__ == '__main__':
-    # main()
-    run_cl(10, 100)
-    '''
-./bin/ma5 -R -s {ma5_card}
-cp -r ANALYSIS_0 {output_folder}
-    '''
+    main()
+    # run_cl(10, 100)
