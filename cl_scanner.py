@@ -66,3 +66,7 @@ def main():
 if __name__ == '__main__':
     # main()
     run_cl(10, 100)
+    '''
+./bin/ma5 -R -s {ma5_card}
+cp -r ANALYSIS_0 {output_folder}
+    '''
