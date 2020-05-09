@@ -49,7 +49,7 @@ stages:
     scheduler:
       parameters:
         ma5_run_card:
-          output: ma5_card
+          output: ma5_run_card
           step: init
         ma5_recast_card:
           output: ma5_recast_card

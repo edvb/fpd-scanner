@@ -2,3 +2,4 @@
 workdir
 __pycache__
 inputs/param_card_*.dat
+*.hepmc

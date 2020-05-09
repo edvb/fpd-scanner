@@ -1,0 +1,31 @@
+stages:
+  - dependencies:
+      - init
+    name: madanalysis5
+    scheduler:
+      parameters:
+        ma5_run_card:
+          output: ma5_run_card
+          step: init
+        ma5_recast_card:
+          output: ma5_recast_card
+          step: init
+        hepmc:
+          output: hepmc
+          step: init
+        output_folder: '{workdir}/ANALYSIS'
+      scheduler_type: singlestep-stage
+      step:
+        environment:
+          environment_type: docker-encapsulated
+          image: recast/madanalysis5
+          imagetag: 'latest'
+        process:
+          process_type: interpolated-script-cmd
+          script: |
+            ./bin/ma5 -R -s {ma5_card}
+            cp -r ANALYSIS_0 {output_folder}
+        publisher:
+          publish:
+            analysis: output_folder
+          publisher_type: interpolated-pub
