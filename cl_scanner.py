@@ -62,4 +62,4 @@ def main():
 
 if __name__ == '__main__':
     # main()
-    # run_cl(10, 100)
+    run_cl(10, 100)

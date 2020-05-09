@@ -1,0 +1,4 @@
+set main.recast=on
+import *.hepmc.gz
+set main.recast.card_path = ma5_recast_card.dat
+submit

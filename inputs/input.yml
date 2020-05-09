@@ -3,5 +3,5 @@ param_card: param_card_mChi100_mPhi4000.dat
 proc_card: proc_card_mg5.dat
 run_card: run_card.dat
 ufotar: DMSimpt_NLO_v1_2_UFO.ufo.tar
-ma5_run_card: ma5_card.dat
+ma5_run_card: ma5_run_card.dat
 ma5_recast_card: ma5_recast_card.dat
