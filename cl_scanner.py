@@ -38,7 +38,7 @@ def run_cl(mChi, mPhi):
     print(f'{input_point:<10}: Workflow Finished')
 
     transfer_output(input_point)
-    print(f'{input_point:<10}: Transferred Output')
+    print(f'{input_point:<10}: Transferred Output\n')
 
 
 def scan_cl(input_points):
@@ -55,7 +55,7 @@ def scan_cl(input_points):
         total_hours += current_hour - last_time
         last_time = current_hour
 
-        print(f'{int(i / len(input_points)) * 100}% done at {total_hours}.')
+        print(f'{int(i / len(input_points) * 100)}% done at {total_hours} hours.')
         run_cl(mChi, mPhi)
 
 
