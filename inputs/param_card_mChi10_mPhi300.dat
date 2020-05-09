@@ -29,8 +29,8 @@ Block mass
    23 9.118760e+01 # MZ 
    25 1.250000e+02 # MH 
    52 1.000000e+09 # set of param :1*MXm, 1*MXs, 1*MXv, 1*MYS3Qu1, 1*MYS3Qu2, 1*MYS3Qu3, 1*MYS3Qd1, 1*MYS3Qd2, 1*MYS3Qd3, 1*MYS3u2, 1*MYS3u3, 1*MYS3d1, 1*MYS3d2, 1*MYS3d3, 1*MYF3Qu1, 1*MYF3Qu2, 1*MYF3Qu3, 1*MYF3Qd1, 1*MYF3Qd2, 1*MYF3Qd3, 1*MYF3u1, 1*MYF3u2, 1*MYF3u3, 1*MYF3d1, 1*MYF3d2, 1*MYF3d3 
-   57 10.0     # MXd
-  2000002 300.0 # MYS3u1
+   57 10     # MXd
+  2000002 300 # MYS3u1
 ## Dependent parameters, given by model restrictions.
 ## Those values should be edited following the 
 ## analytical expression. MG5 ignores those values 

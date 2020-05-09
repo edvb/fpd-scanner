@@ -1,4 +1,5 @@
-#!/bin/sh
+#!bin/bash
 
 rm -r workdir
-yadage-run workdir workflows/madgraph_simple.yml inputs/input.yml -d initdir=$PWD/inputs &> /dev/null
+WORKFLOW=${1:-workflows/workflow.yml}
+yadage-run workdir $WORKFLOW inputs/input.yml -d initdir=$PWD/inputs

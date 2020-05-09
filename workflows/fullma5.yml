@@ -1,0 +1,75 @@
+stages:
+  - dependencies: ["init"]
+    name: madgraph
+    scheduler:
+      parameters:
+        proc_card: {output: proc_card, step: init}
+        n_events: {output: n_events, step: init}
+        outputlhe: '{workdir}/events.lhe'
+      scheduler_type: singlestep-stage
+      step:
+        environment:
+          environment_type: docker-encapsulated
+          image: recast/madgraph
+          imagetag: '2.6.7_v2'
+        process:
+          process_type: string-interpolated-cmd
+          cmd: python steer_madgraph.py {proc_card} {outputlhe} -n {n_events}
+        publisher:
+          outputmap:
+            lhefile: outputlhe
+          publisher_type: frompar-pub
+  - dependencies: ["madgraph"]
+    name: pythia
+    scheduler:
+      parameters:
+        inputlhe:
+          output: lhefile
+          step: madgraph
+        n_events:
+          output: n_events
+          step: init
+        outputhepmc: '{workdir}/output.hepmc'
+      scheduler_type: singlestep-stage
+      step:
+        environment:
+          environment_type: docker-encapsulated
+          image: recast/madgraph-pythia
+          imagetag: '2.6.6'
+        process:
+          process_type: string-interpolated-cmd
+          cmd: 'python steer_pythia.py {inputlhe} {outputhepmc} {n_events}'
+        publisher:
+          outputmap:
+            hepmc: outputhepmc
+          publisher_type: frompar-pub
+  - dependencies:
+    - pythia
+    name: madanalysis5
+    scheduler:
+      parameters:
+        ma5_run_card:
+          output: ma5_card
+          step: init
+        ma5_recast_card:
+          output: ma5_recast_card
+          step: init
+        hepmc:
+          output: hepmc
+          step: pythia
+        output_folder: "{workdir}/ANALYSIS"
+      scheduler_type: singlestep-stage
+      step:
+        environment:
+          environment_type: docker-encapsulated
+          image: recast/madanalysis5
+          imagetag: 'latest'
+        process:
+          process_type: string-interpolated-cmd
+          script: |
+            ./bin/ma5 -R -s {ma5_card}
+            cp -r ANALYSIS_0 {output_folder}
+        publisher:
+          publish:
+            analysis: output_folder
+          publisher_type: interpolated-pub
