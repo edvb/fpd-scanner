@@ -1,0 +1,4 @@
+set main.currentdir = /LHC-DMWG/MG5_aMC_v2_7_2/madanalysis5
+set main.recast=on
+import /Users/vlad/Documents/EPEprojects/fpd-cl-scan/workdir/pythia/output.hepmc
+set main.recast.card_path = ma5_recast_card.dat

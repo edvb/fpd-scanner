@@ -15,8 +15,8 @@ def transfer_output(input_point, input_path='./workdir/madanalysis5/ANALYSIS', o
     summary_path = folder_path / 'Output' / 'SAF' / 'CLs_output_summary.dat'
 
     if input_path.exists():
-        shutil.move(input_path, folder_path)
-        shutil.copy(summary_path, output_path / 'summaries' / f'summary-{input_point}.txt')
+        shutil.move(str(input_path), str(folder_path))
+        shutil.copy(str(summary_path), str(output_path / 'summaries' / f'summary-{input_point}.txt'))
     else:
         print(f'{input_point:<10}: Missing workflow folder, moving on')
 
@@ -60,7 +60,7 @@ def scan_cl(input_points):
 
 
 def main():
-    scan_cl(INPUT_POINTS)
+    scan_cl(INPUT_POINTS[INPUT_POINTS.index((1000, 2500)):])
 
 
 if __name__ == '__main__':

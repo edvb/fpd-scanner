@@ -1,0 +1,21 @@
+# dataset name                analysis name               signal region                                               sig95(exp)     sig95(obs)        ||    efficiency     stat           
+defaultset                    atlas_exot_2016_27            EM1                                                         4.2354049      4.3003283       ||    0.0298000      0.0016223      
+defaultset                    atlas_exot_2016_27            EM2                                                         0.3889062      0.5932374       ||    0.0410000      0.0018919      
+defaultset                    atlas_exot_2016_27            EM3                                                         0.9799955      1.6021240       ||    0.0530000      0.0021375      
+defaultset                    atlas_exot_2016_27            EM4                                                         0.3050473      0.3394790       ||    0.1125000      0.0030148      
+defaultset                    atlas_exot_2016_27            EM5                                                         0.1356926      0.1930432       ||    0.0842000      0.0026494      
+defaultset                    atlas_exot_2016_27            EM6                                                         0.1072335      0.1786350       ||    0.0481000      0.0020416      
+defaultset                    atlas_exot_2016_27            EM7                                                         0.1003394      0.1410793       ||    0.0256000      0.0015069      
+defaultset                    atlas_exot_2016_27            EM8                                                         0.1040101      0.1797350       ||    0.0153000      0.0011711      
+defaultset                    atlas_exot_2016_27            EM9                                                         0.0978073      0.1193341       ||    0.0099000      0.0009446      
+defaultset                    atlas_exot_2016_27            IM1                                                         0.7327877      1.2421144       ||    0.4303000      0.0047239      
+defaultset                    atlas_exot_2016_27            IM2                                                         0.4641540      0.8268580       ||    0.4004999      0.0046751      
+defaultset                    atlas_exot_2016_27            IM3                                                         0.2879153      0.5370453       ||    0.3595000      0.0045783      
+defaultset                    atlas_exot_2016_27            IM4                                                         0.1811111      0.3005239       ||    0.3065000      0.0043988      
+defaultset                    atlas_exot_2016_27            IM5                                                         0.1005000      0.2212582       ||    0.1940000      0.0037728      
+defaultset                    atlas_exot_2016_27            IM6                                                         0.0859919      0.1785459       ||    0.1098000      0.0029829      
+defaultset                    atlas_exot_2016_27            IM7                                                         0.0885733      0.1253375       ||    0.0617000      0.0022957      
+defaultset                    atlas_exot_2016_27            IM8                                                         0.0946879      0.1387613       ||    0.0361000      0.0017798      
+defaultset                    atlas_exot_2016_27            IM9                                                         0.1056511      0.1097280       ||    0.0208000      0.0013616      
+defaultset                    atlas_exot_2016_27            IM10                                                        0.1396504      0.1531254       ||    0.0109000      0.0009907      
+

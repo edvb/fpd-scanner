@@ -1,0 +1,27 @@
+# AnalysisName               PADType    Switch     DetectorCard
+# Detector cards must be located in the PAD(ForMA5tune/ForSFS) directory
+# Switches must be on or off
+atlas_conf_2016_086           v1.2        off    delphes_card_atlas_conf_2016_086.tcl               #  ATLAS - 13 TeV - Dark matter production with a bbar pair (13.3 fb-1)
+atlas_conf_2019_040           v1.2        off    delphes_card_atlas_exot_2015_03.tcl                #  ATLAS - 13 TeV - Multijet + met (139 fb-1)
+atlas_exot_2014_06            v1.2        off    delphes_card_atlas_sus_2013_05_pad.tcl             #  ATLAS -  8 TeV - monophoton
+atlas_exot_2015_03            v1.2        off    delphes_card_atlas_exot_2015_03.tcl                #  ATLAS - 13 TeV - Monojet (3.2 fb-1)
+atlas_exot_2016_25            v1.2        off    delphes_card_atlas_2016_25.tcl                     #  ATLAS - 13 TeV - Monohiggs in the bbar channel (36.1 fb-1)
+atlas_exot_2016_27            v1.2        on    delphes_card_atlas_exot_2016_27.tcl                #  ATLAS - 13 TeV - Monojet (36.1 fb-1)
+atlas_exot_2016_32            v1.2        off    delphes_card_atlas_2016_32.tcl                     #  ATLAS - 13 TeV - Monophoton (36.1 fb-1)
+atlas_susy_2015_06            v1.2        off   delphes_card_atlas_exot_2015_03.tcl                #  ATLAS - 13 TeV - Multijet + met (2-6 jets, 3.2 fb-1)
+atlas_susy_2016_07            v1.2        off    delphes_card_atlas_exot_2015_03.tcl                #  ATLAS - 13 TeV - Multijet + met (36.1 fb-1)
+atlas_susy_2018_031           v1.2        off    delphes_card_atlas_exot_2015_03.tcl                #  ATLAS - 13 TeV - b-jets, Higgs and met (139 fb-1)
+cms_b2g_12_012                v1.2        off    delphes_card_cms_b2g_12_012.tcl                    #  CMS   -  8 TeV - X_{5/3} partners in the SS2L channel
+cms_b2g_12_022                v1.2        off    delphes_card_cms_b2g_14_004.tcl                    #  CMS   -  8 TeV - Hadronic monotops
+cms_b2g_14_004                v1.2        off    delphes_card_cms_b2g_14_004.tcl                    #  CMS   -  8 TeV - Dark matter production with a ttbar pair
+cms_exo_12_047                v1.2        off    delphes_card_cms_b2g_12_012.tcl                    #  CMS   -  8 TeV - monophoton
+cms_exo_12_048                v1.2        off    delphes_card_cms_b2g_12_012.tcl                    #  CMS   -  8 TeV - monojet
+cms_exo_16_010                v1.2        off    delphes_card_cms_exo_16_010.tcl                    #  CMS   - 13 TeV - Mono-Z (2.3 fb-1)
+cms_exo_16_012                v1.2        off    delphes_card_cms_exo_16_012.tcl                    #  CMS   - 13 TeV - Monohiggs in the diphoton channel (2.3 fb-1)
+cms_exo_16_022                v1.2        off    delphes_card_cms_exo_16_022.tcl                    #  CMS   - 13 TeV - Long-lived leptons (2.6 fb-1)
+cms_sus_16_033                v1.2        off    delphes_card_cms_sus_16_033.tcl                    #  CMS   - 13 TeV - SUSY multijets (35.9 fb-1)
+cms_sus_16_039                v1.2        off    delphes_card_cms_sus_16_039.tcl                    #  CMS   - 13 TeV - SUSY multileptons (36 fb-1)
+cms_sus_16_052                v1.2        off    delphes_card_cms_sus_16_052.tcl                    #  CMS   - 13 TeV - SUSY 1 lepton + jets (36 fb-1)
+cms_sus_17_001                v1.2        off    delphes_card_cms_exo_16_010.tcl                    #  CMS   - 13 TeV - stops in the OS2L+jets channel (35.9 fb-1)
+cms_top_17_009                v1.2        off    delphes_card_cms_top_17_009.tcl                    #  CMS   - 13 TeV - 4top analysis (SS2L and multilepton, 35.9 fb-1)
+cms_top_18_003                v1.2        off    delphes_card_cms_top_18_003.tcl                    #  CMS   - 13 TeV - 4top analysis (SS2L and multilepton, 137 fb-1)#

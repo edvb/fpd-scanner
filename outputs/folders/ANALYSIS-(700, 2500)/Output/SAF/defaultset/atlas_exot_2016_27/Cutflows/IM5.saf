@@ -1,0 +1,82 @@
+<SAFheader>
+</SAFheader>
+
+<InitialCounter>
+"Initial number of events"      #
+10000           0               # nentries
+3.034620e+02    0.000000e+00    # sum of weights
+9.208918e+00    0.000000e+00    # sum of weights^2
+</InitialCounter>
+
+<Counter>
+"MET > 250 GeV"                 # 1st cut
+6439            0               # nentries
+1.953992e+02    0.000000e+00    # sum of weights
+5.929622e+00    0.000000e+00    # sum of weights^2
+</Counter>
+
+<Counter>
+"ElectronVeto"                  # 2st cut
+6439            0               # nentries
+1.953992e+02    0.000000e+00    # sum of weights
+5.929622e+00    0.000000e+00    # sum of weights^2
+</Counter>
+
+<Counter>
+"MuonVeto"                      # 3st cut
+6439            0               # nentries
+1.953992e+02    0.000000e+00    # sum of weights
+5.929622e+00    0.000000e+00    # sum of weights^2
+</Counter>
+
+<Counter>
+"Njets <= 4"                    # 4st cut
+5380            0               # nentries
+1.632625e+02    0.000000e+00    # sum of weights
+4.954398e+00    0.000000e+00    # sum of weights^2
+</Counter>
+
+<Counter>
+"dphij1met > 0.4"               # 5st cut
+5362            0               # nentries
+1.627163e+02    0.000000e+00    # sum of weights
+4.937822e+00    0.000000e+00    # sum of weights^2
+</Counter>
+
+<Counter>
+"dphij2met > 0.4"               # 6st cut
+5081            0               # nentries
+1.541890e+02    0.000000e+00    # sum of weights
+4.679051e+00    0.000000e+00    # sum of weights^2
+</Counter>
+
+<Counter>
+"dphij3met > 0.4"               # 7st cut
+4884            0               # nentries
+1.482108e+02    0.000000e+00    # sum of weights
+4.497635e+00    0.000000e+00    # sum of weights^2
+</Counter>
+
+<Counter>
+"dphij4met > 0.4"               # 8st cut
+4807            0               # nentries
+1.458742e+02    0.000000e+00    # sum of weights
+4.426727e+00    0.000000e+00    # sum of weights^2
+</Counter>
+
+<Counter>
+"Leading jet pT > 250 GeV"      # 9st cut
+4313            0               # nentries
+1.308832e+02    0.000000e+00    # sum of weights
+3.971806e+00    0.000000e+00    # sum of weights^2
+</Counter>
+
+<Counter>
+"MET > 500 GeV(IM5)"            # 10st cut
+1934            0               # nentries
+5.868955e+01    0.000000e+00    # sum of weights
+1.781005e+00    0.000000e+00    # sum of weights^2
+</Counter>
+
+<SAFfooter>
+</SAFfooter>

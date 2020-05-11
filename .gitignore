@@ -4,4 +4,3 @@ __pycache__
 inputs/param_card_*.dat
 *.hepmc
 .DS_Store
-outputs/*

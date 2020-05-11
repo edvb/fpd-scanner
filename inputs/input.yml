@@ -2,7 +2,7 @@ hepmc: output.hepmc
 ma5_recast_card: ma5_recast_card.dat
 ma5_run_card: ma5_run_card.dat
 n_events: 10000
-param_card: param_card_mChi600_mPhi1400.dat
+param_card: param_card_mChi2000_mPhi4000.dat
 proc_card: proc_card_mg5.dat
 run_card: run_card.dat
 ufotar: DMSimpt_NLO_v1_2_UFO.ufo.tar
