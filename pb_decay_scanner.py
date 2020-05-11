@@ -1,4 +1,5 @@
 import re
+import time
 
 from utils import *
 
@@ -34,10 +35,12 @@ def save_stats(point, decay, pb, save_path='./results.txt'):
         save_file.write(f"{point} {decay} {pb}\n")
 
 
-def run_pb_decay(input_point, mChi, mPhi):
+def run_pb_decay(mChi, mPhi):
     """
     Run one workflow to find pb and decay
     """
+    input_point = f'({mChi}, {mPhi})'
+
     print(f'{input_point:<10}: Generating Param Card')
     path, _ = make_param_card(mChi, mPhi)
 
@@ -61,15 +64,14 @@ def run_pb_decay(input_point, mChi, mPhi):
 def scan_pb_decay(input_points):
     for i in range(0, len(input_points)):
         mChi, mPhi = input_points[i]
-        input_point = f'({mChi}, {mPhi})'
 
-        run_pb_decay(input_point, mChi, mPhi)
+        run_pb_decay(mChi, mPhi)
 
         print(f'{i / len(input_points) * 100}% done at {time.time()}.')
 
 
 def main():
-    scan_pb_decay(INPUT_POINTS)
+    scan_pb_decay(INPUT_POINTS[1:])
 
 
 if __name__ == '__main__':
