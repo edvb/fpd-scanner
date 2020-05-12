@@ -1,3 +1,5 @@
+import sys
+
 def make_xsec_s95(summaries_path='./outputs/summaries', results_path='./results.txt', output_path='./organized.txt',
                   exp_min=True):
     output_str = f'{"(mChi, mPhi)":20} {"xsec":20} {"s95(exp)":20} {"s95(obs)":20}\n'
@@ -12,7 +14,7 @@ def make_xsec_s95(summaries_path='./outputs/summaries', results_path='./results.
                 summary = summary_file.readlines()[1:-1]
                 summary = [i.split() for i in summary if i.strip()]
 
-                get_sig95exp = lambda x: x[3]
+                get_sig95exp = lambda x: x[3] if float(x[3]) > -1 else str(sys.maxsize)
                 get_sig95obs = lambda x: x[4]
                 best_sr = min(summary, key=get_sig95exp if exp_min else get_sig95obs)
 
@@ -29,4 +31,4 @@ def make_xsec_s95(summaries_path='./outputs/summaries', results_path='./results.
 
 
 if __name__ == '__main__':
-    make_xsec_s95(output_path='./organized1.txt', exp_min=False)
+    make_xsec_s95(output_path='./organized.txt', exp_min=True)
