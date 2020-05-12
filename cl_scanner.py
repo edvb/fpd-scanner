@@ -60,7 +60,8 @@ def scan_cl(input_points):
 
 
 def main():
-    scan_cl(INPUT_POINTS[INPUT_POINTS.index((1000, 2500)):])
+    run_cl(800, 2500)
+    # scan_cl(INPUT_POINTS[INPUT_POINTS.index((1000, 2500)):])
 
 
 if __name__ == '__main__':
