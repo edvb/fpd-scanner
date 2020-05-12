@@ -1,4 +1,5 @@
-def make_xsec_s95(summaries_path='./outputs/summaries', results_path='./results.txt', output_path='./organized.txt'):
+def make_xsec_s95(summaries_path='./outputs/summaries', results_path='./results.txt', output_path='./organized.txt',
+                  exp_min=True):
     output_str = f'{"(mChi, mPhi)":20} {"xsec":20} {"s95(exp)":20} {"s95(obs)":20}\n'
 
     with open(results_path) as results_file:
@@ -13,7 +14,7 @@ def make_xsec_s95(summaries_path='./outputs/summaries', results_path='./results.
 
                 get_sig95exp = lambda x: x[3]
                 get_sig95obs = lambda x: x[4]
-                best_sr = min(summary, key=get_sig95exp)
+                best_sr = min(summary, key=get_sig95exp if exp_min else get_sig95obs)
 
                 s95exp, sig95obs = get_sig95exp(best_sr), get_sig95obs(best_sr)
 
@@ -28,4 +29,4 @@ def make_xsec_s95(summaries_path='./outputs/summaries', results_path='./results.
 
 
 if __name__ == '__main__':
-    make_xsec_s95()
+    make_xsec_s95(output_path='./organized1.txt', exp_min=False)
