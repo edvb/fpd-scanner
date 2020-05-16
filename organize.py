@@ -1,8 +1,8 @@
 import sys
 
 def make_xsec_s95(summaries_path='./outputs/summaries', results_path='./results.txt', output_path='./organized.txt',
-                  exp_min=True):
-    output_str = f'{"(mChi, mPhi)":20} {"xsec":20} {"s95(exp)":20} {"s95(obs)":20}\n'
+                  exp_min=True, include_par=False):
+    output_str = f'{"(mChi, mPhi)":20} {"xsec":20} {"s95(exp)":20} {"s95(obs)":20}\n' if include_par else f'{"mChi":20} {"mPhi":20} {"xsec":20} {"s95(exp)":20} {"s95(obs)":20}\n'
 
     with open(results_path) as results_file:
         results = results_file.readlines()
@@ -20,7 +20,7 @@ def make_xsec_s95(summaries_path='./outputs/summaries', results_path='./results.
 
                 s95exp, sig95obs = get_sig95exp(best_sr), get_sig95obs(best_sr)
 
-            output_str += f'{f"({mChi}, {mPhi})":20} {xsec:20} {s95exp:20} {sig95obs}\n'
+            output_str += f'{f"({mChi}, {mPhi})":20} {xsec:20} {s95exp:20} {sig95obs}\n' if include_par else f'{mChi:20} {mPhi:20} {xsec:20} {s95exp:20} {sig95obs}\n'
 
     print(output_str)
 
