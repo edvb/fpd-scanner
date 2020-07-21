@@ -2,5 +2,5 @@
 
 To run:
 
-    git clone
+    git clone https://github.com/vladov3000/fpd-scanner.git
     python3 cl_scanner.py
