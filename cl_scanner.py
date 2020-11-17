@@ -34,11 +34,11 @@ def run_cl(mChi, mPhi):
     set_param_card(path)
 
     print(f'{input_point:<10}: Executing Workflow')
-    run_flow(wf='fullma5.yml')
+    run_flow(wf='fullma5.yml', workdir=f'workdir-{mChi}-{mPhi}')
     print(f'{input_point:<10}: Workflow Finished')
 
-    transfer_output(input_point)
-    print(f'{input_point:<10}: Transferred Output\n')
+    # transfer_output(input_point)
+    # print(f'{input_point:<10}: Transferred Output\n')
 
 
 def scan_cl(input_points):
